@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            function nightDayHandler(self) {
+                var target = document.querySelector('body');
+        if(this.value == 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+        }else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+        }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Loop & Array</h1>
+            <script>
+                var coworkers = ['egoing', 'leezche', 'duru', 'taeho'];
+            </script>
+        <h2>Co workers</h2>
+        <ul>
+            <script>
+                var i =0;
+                while(i<coworkers.length) {
+                    document.write('<li><a href="http://"a.com/' + coworkers[i] + '">"' + 
+                    coworkers[i] + '</a></li>');
+                    i = i + 1;
+                }
+            </script>
+        </ul>
+        
+        <h2>링크를 야간주간마다 색이 다르게 하기</h2>
+        
+        <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+        ">
+    </body>
+</html>
